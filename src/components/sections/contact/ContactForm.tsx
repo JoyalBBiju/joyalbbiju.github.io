@@ -15,6 +15,8 @@ import {
   FaGithub,
   FaYoutube,
   FaTiktok,
+  FaMediumM,
+  FaMedium,
 } from 'react-icons/fa'
 
 const smoothEase: [number, number, number, number] = [
@@ -44,26 +46,30 @@ const socialLinks = [
     title: 'Instagram',
     user: '@instagram',
     icon: FaInstagram,
-    link: 'https://www.instagram.com/itsmeikky_12?igsh=ZHFpMTJ1bHQzeDAx',
+    link: 'https://www.instagram.com/j0yall_?utm_source=qr&igsh=YTZwbXR1ZGVpdGhn',
   },
   {
     title: 'Youtube',
     user: '@youtube',
     icon: FaYoutube,
-    link: 'https://youtube.com/@zettaajah?si=QRjJGD4zCQG8aIHX',
+    link: '',
   },
   {
     title: 'Github',
     user: '@github',
     icon: FaGithub,
-    link: 'https://github.com/RifqiMuhammadAliya12',
+    link: 'https://github.com/JoyalBBiju',
   },
-  {
-    title: 'TikTok',
-    user: '@tiktok',
-    icon: FaTiktok,
-    link: 'https://www.tiktok.com/@itsme.ikky_?_r=1&_t=ZS-95yAYr5PHUb',
-  },
+   import { FaMediumM } from "react-icons/fa"
+  
+  const socialLinks = [
+    {
+      title: "Medium",
+      user: "@joyalbbiju",
+      icon: FaMediumM,
+      link: "https://medium.com/@joyalbbiju",
+    },
+  ]
 ]
 
 export default function ContactForm() {
@@ -184,7 +190,7 @@ export default function ContactForm() {
 
         {/* LINKEDIN */} 
         <motion.a
-          href="https://www.linkedin.com/in/rifqimuhammadaliya/"  
+          href="https://www.linkedin.com/in/joyal-b-biju/"  
           target="_blank"
           rel="noopener noreferrer"
           variants={fieldVariants}
