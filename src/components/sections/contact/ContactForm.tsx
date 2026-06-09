@@ -11,65 +11,34 @@ import {
 
 import {
   FaLinkedinIn,
-  FaInstagram,
   FaGithub,
-  FaYoutube,
-  FaTiktok,
-  FaMediumM,
-  FaMedium,
 } from 'react-icons/fa'
+import { MdEmail } from 'react-icons/md'
 
-const smoothEase: [number, number, number, number] = [
-  0.22,
-  1,
-  0.36,
-  1,
-]
+const smoothEase: [number, number, number, number] = [0.22, 1, 0.36, 1]
 
 const fieldVariants: Variants = {
-  hidden: {
-    opacity: 0,
-    y: 26,
-  },
+  hidden: { opacity: 0, y: 26 },
   show: {
     opacity: 1,
     y: 0,
-    transition: {
-      duration: 0.6,
-      ease: smoothEase,
-    },
+    transition: { duration: 0.6, ease: smoothEase },
   },
 }
 
 const socialLinks = [
   {
-    title: 'Instagram',
-    user: '@instagram',
-    icon: FaInstagram,
-    link: 'https://www.instagram.com/j0yall_?utm_source=qr&igsh=YTZwbXR1ZGVpdGhn',
-  },
-  {
-    title: 'Youtube',
-    user: '@youtube',
-    icon: FaYoutube,
-    link: '',
-  },
-  {
-    title: 'Github',
-    user: '@github',
+    title: 'GitHub',
+    user: '@JoyalBBiju',
     icon: FaGithub,
     link: 'https://github.com/JoyalBBiju',
   },
-   import { FaMediumM } from "react-icons/fa"
-  
-  const socialLinks = [
-    {
-      title: "Medium",
-      user: "@joyalbbiju",
-      icon: FaMediumM,
-      link: "https://medium.com/@joyalbbiju",
-    },
-  ]
+  {
+    title: 'Email',
+    user: 'joyalbbiju@gmail.com',
+    icon: MdEmail,
+    link: 'mailto:joyalbbiju@gmail.com',
+  },
 ]
 
 export default function ContactForm() {
@@ -90,12 +59,12 @@ export default function ContactForm() {
         transition={{ delay: 0.05 }}
       >
         <h2 className="text-2xl md:text-3xl font-bold mb-3">
-          Hubungi Saya
+          Get In Touch
         </h2>
 
         <p className="text-sm text-white/50 mb-7">
           Feel free to reach out if you want to collaborate,
-          discuss ideas, or simply say hello.
+          discuss cloud projects, or simply say hello.
         </p>
       </motion.div>
 
@@ -111,7 +80,6 @@ export default function ContactForm() {
         >
           <div className="relative">
             <User className="absolute left-4 top-1/2 -translate-y-1/2 text-white/40" />
-
             <input
               placeholder="Your Name"
               className="w-full rounded-2xl border border-white/15 bg-black/20 pl-12 pr-4 py-4 outline-none transition duration-200 focus:border-white focus:ring-1 focus:ring-white/40"
@@ -129,7 +97,6 @@ export default function ContactForm() {
         >
           <div className="relative">
             <Mail className="absolute left-4 top-1/2 -translate-y-1/2 text-white/40" />
-
             <input
               placeholder="Your Email"
               className="w-full rounded-2xl border border-white/15 bg-black/20 pl-12 pr-4 py-4 outline-none transition duration-200 focus:border-white focus:ring-1 focus:ring-white/40"
@@ -147,7 +114,6 @@ export default function ContactForm() {
         >
           <div className="relative">
             <MessageSquare className="absolute left-4 top-5 text-white/40" />
-
             <textarea
               rows={5}
               placeholder="Your Message"
@@ -163,10 +129,7 @@ export default function ContactForm() {
           whileInView="show"
           viewport={{ once: false }}
           transition={{ delay: 0.28 }}
-          whileHover={{
-            scale: 1.06,
-            transition: { duration: 0.12 },
-          }}
+          whileHover={{ scale: 1.06, transition: { duration: 0.12 } }}
           whileTap={{ scale: 0.97 }}
           className="w-full rounded-2xl py-4 bg-white/10 border border-white/10 flex items-center justify-center gap-2"
         >
@@ -188,9 +151,9 @@ export default function ContactForm() {
           Connect With Me
         </motion.p>
 
-        {/* LINKEDIN */} 
+        {/* LINKEDIN — full width */}
         <motion.a
-          href="https://www.linkedin.com/in/joyal-b-biju/"  
+          href="https://www.linkedin.com/in/joyal-b-biju/"
           target="_blank"
           rel="noopener noreferrer"
           variants={fieldVariants}
@@ -198,20 +161,16 @@ export default function ContactForm() {
           whileInView="show"
           viewport={{ once: false }}
           transition={{ delay: 0.36 }}
-          whileHover={{
-            scale: 1.05,
-            transition: { duration: 0.12 },
-          }}
+          whileHover={{ scale: 1.05, transition: { duration: 0.12 } }}
           className="group relative overflow-hidden rounded-2xl border border-white/10 bg-black/20 p-4 mb-3 flex items-center justify-between"
         >
           <div className="absolute inset-0 bg-white/[0.04] translate-x-[-100%] group-hover:translate-x-0 transition-transform duration-700 ease-out" />
 
           <div className="relative z-10 flex items-center gap-3">
             <FaLinkedinIn />
-
             <div>
               <p className="text-sm font-medium">LinkedIn</p>
-              <p className="text-xs text-white/35">@linkedin</p>
+              <p className="text-xs text-white/35">@joyal-b-biju</p>
             </div>
           </div>
 
@@ -222,7 +181,7 @@ export default function ContactForm() {
           </div>
         </motion.a>
 
-        {/* GRID */}
+        {/* GRID — GitHub + Email */}
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
           {socialLinks.map((item, i) => {
             const Icon = item.icon
@@ -237,25 +196,17 @@ export default function ContactForm() {
                 initial="hidden"
                 whileInView="show"
                 viewport={{ once: false }}
-                transition={{
-                  delay: 0.42 + i * 0.05,
-                }}
-                whileHover={{
-                  scale: 1.06,
-                  transition: { duration: 0.12 },
-                }}
+                transition={{ delay: 0.42 + i * 0.05 }}
+                whileHover={{ scale: 1.06, transition: { duration: 0.12 } }}
                 className="group relative overflow-hidden rounded-2xl border border-white/10 bg-black/20 p-3 flex items-center justify-between"
               >
                 <div className="absolute inset-0 bg-white/[0.04] translate-x-[-100%] group-hover:translate-x-0 transition-transform duration-700 ease-out" />
 
                 <div className="relative z-10 flex items-center gap-3">
                   <Icon />
-
                   <div>
                     <p className="text-sm">{item.title}</p>
-                    <p className="text-[11px] text-white/35">
-                      {item.user}
-                    </p>
+                    <p className="text-[11px] text-white/35">{item.user}</p>
                   </div>
                 </div>
 
