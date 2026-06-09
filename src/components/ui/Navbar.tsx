@@ -10,7 +10,6 @@ export default function Navbar() {
   const [activeSection, setActiveSection] = useState('home')
   const [mounted, setMounted] = useState(false)
 
-  // 🔥 navbar muncul sekali aja
   const [showNavbar, setShowNavbar] = useState(false)
 
   useEffect(() => {
@@ -50,7 +49,6 @@ export default function Navbar() {
     }
   }, [])
 
-  // 🔥 navbar animasi cuma pas refresh
   useEffect(() => {
     const navbarPlayed = sessionStorage.getItem('navbarPlayed')
 
@@ -156,6 +154,7 @@ export default function Navbar() {
           border: '1px solid var(--border)',
         }}
       >
+        {/* YOUR BRAND NAME */}
         <span
           style={{
             fontFamily: "'DM Mono', monospace",
@@ -164,7 +163,7 @@ export default function Navbar() {
             letterSpacing: '0.1em',
           }}
         >
-          rifqi.dev
+          joyal.dev
         </span>
 
         {!isMobile && (
@@ -201,9 +200,7 @@ export default function Navbar() {
                       width: '100%',
                       height: 1,
                       background: 'white',
-                      transform: isActive
-                        ? 'scaleX(1)'
-                        : 'scaleX(0)',
+                      transform: isActive ? 'scaleX(1)' : 'scaleX(0)',
                       transformOrigin: 'left',
                       transition: 'transform 0.25s ease',
                     }}

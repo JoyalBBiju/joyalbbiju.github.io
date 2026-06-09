@@ -172,9 +172,8 @@ export default function About() {
                   color: "var(--text-primary)",
                 }}
               >
-                <div>Rifqi</div>
-                <div>Muhammad</div>
-                <div>Aliya</div>
+                <div>Joyal</div>
+                <div>Biju</div>
               </div>
             </motion.div>
 
@@ -198,10 +197,12 @@ export default function About() {
                 maxWidth: isMobile ? "100%" : "490px",
               }}
             >
-              Fresh Graduate SMK Rekayasa Perangkat Lunak lulusan 2026 dengan
-              passion di bidang frontend development dan UI modern. Berfokus
-              pada pembuatan website clean, responsif, dan visual yang kuat
-              untuk menghadirkan pengalaman digital yang optimal.
+              Associate Cloud Engineer with hands-on experience in AWS Cloud,
+              DevOps, Linux, and Infrastructure Automation. Experienced in
+              building cloud-native solutions, serverless applications, CI/CD
+              pipelines, monitoring systems, and containerized deployments.
+              Passionate about cloud architecture, automation, observability,
+              and AI-assisted engineering using GitHub Copilot.
             </motion.p>
 
             {/* QUOTE */}
@@ -229,8 +230,7 @@ export default function About() {
                 width: "fit-content",
               }}
             >
-              “Turning ideas into clean, modern, and meaningful digital
-              experiences.”
+              "Automating the cloud, one pipeline at a time."
             </motion.div>
 
             {/* BUTTONS */}
@@ -245,7 +245,7 @@ export default function About() {
             >
               {/* DOWNLOAD CV */}
               <a
-                href="https://drive.google.com/file/d/1cFqZ0TY0U0I51K0Tchv8E4sbOv5yAZ9x/view?usp=drive_link"
+                href="https://github.com/JoyalBBiju"
                 target="_blank"
                 rel="noopener noreferrer"
                 style={{ textDecoration: "none" }}
@@ -336,7 +336,7 @@ export default function About() {
               >
                 <img
                   src="/assets/PP.png"
-                  alt="Profile"
+                  alt="Joyal Biju"
                   style={{
                     width: 240,
                     height: 240,

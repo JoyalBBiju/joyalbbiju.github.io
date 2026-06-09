@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 import App from "@/components/band/App";
 import TextType from "@/components/band/TextType";
 
-const skills = ["Typescript", "React.js", "Tailwind"];
+const skills = ["AWS", "DevOps", "Kubernetes", "Terraform", "Docker"];
 
 type HeroProps = {
   showApp: boolean;
@@ -118,7 +118,7 @@ export default function Hero({ showApp }: HeroProps) {
               marginBottom: 0,
             }}
           >
-            Frontend
+            Cloud &
           </motion.h1>
 
           <motion.h1
@@ -142,7 +142,7 @@ export default function Hero({ showApp }: HeroProps) {
               marginBottom: 24,
             }}
           >
-            Developer
+            DevOps Engineer
           </motion.h1>
         </div>
 
@@ -162,7 +162,7 @@ export default function Hero({ showApp }: HeroProps) {
             }}
           >
             <TextType
-              text={["Junior Programmer", "fresh Graduate", "Happy coding!"]}
+              text={["Associate Cloud Engineer", "AWS & DevOps Enthusiast", "Building Cloud-Native Solutions!"]}
               typingSpeed={75}
               pauseDuration={1500}
               showCursor
@@ -185,7 +185,7 @@ export default function Hero({ showApp }: HeroProps) {
           style={{
             marginBottom: 28,
             width: "100%",
-            maxWidth: 460, // batas lebar biar jadi 3 baris
+            maxWidth: 460,
           }}
         >
           <p
@@ -197,9 +197,9 @@ export default function Hero({ showApp }: HeroProps) {
               textWrap: "pretty",
             }}
           >
-            Menciptakan website modern dengan tampilan clean, responsif, dan
-            elegan. Mengubah ide dan desain menjadi pengalaman digital yang
-            menarik dan mudah digunakan.
+            Building cloud-native solutions, serverless applications, and
+            CI/CD pipelines. Passionate about cloud architecture, automation,
+            observability, and AI-assisted engineering.
           </p>
         </motion.div>
 
@@ -278,6 +278,7 @@ export default function Hero({ showApp }: HeroProps) {
           </span>
         </motion.div>
       </div>
+
       {/* SCROLL INDICATOR */}
       <motion.div
         initial={false}
@@ -296,56 +297,33 @@ export default function Hero({ showApp }: HeroProps) {
           pointerEvents: "none",
         }}
       >
-        {/* SCROLL INDICATOR */}
-<motion.div
-  initial={false}
-  animate={
-    startAnim
-      ? { opacity: 1, y: 0 }
-      : { opacity: 0, y: 40 }
-  }
-  transition={{
-    duration: 0.9,
-    delay: 1.2,
-    ease: [0.22, 1, 0.36, 1],
-  }}
-  className="absolute bottom-4 left-1/2 -translate-x-1/2 z-20 pointer-events-none w-full flex justify-center"
->
-  <motion.div
-    animate={{
-      y: [0, 6, 0],
-      opacity: [1, 0.65, 1],
-    }}
-    transition={{
-      duration: 1.4,
-      repeat: Infinity,
-      ease: 'easeInOut',
-    }}
-    className="flex items-center justify-center gap-2"
-  >
-    <span
-      style={{
-        fontFamily: "'DM Mono', monospace",
-        fontSize: 11,
-        letterSpacing: '0.2em',
-        textTransform: 'uppercase',
-        color: 'var(--text-muted)',
-      }}
-    >
-      Scroll
-    </span>
-
-    <span
-      style={{
-        fontSize: 16,
-        color: 'var(--text-secondary)',
-        lineHeight: 1,
-      }}
-    >
-      ↓
-    </span>
-  </motion.div>
-</motion.div>
+        <motion.div
+          initial={false}
+          animate={startAnim ? { opacity: 1, y: 0 } : { opacity: 0, y: 40 }}
+          transition={{ duration: 0.9, delay: 1.2, ease: [0.22, 1, 0.36, 1] }}
+          className="absolute bottom-4 left-1/2 -translate-x-1/2 z-20 pointer-events-none w-full flex justify-center"
+        >
+          <motion.div
+            animate={{ y: [0, 6, 0], opacity: [1, 0.65, 1] }}
+            transition={{ duration: 1.4, repeat: Infinity, ease: "easeInOut" }}
+            className="flex items-center justify-center gap-2"
+          >
+            <span
+              style={{
+                fontFamily: "'DM Mono', monospace",
+                fontSize: 11,
+                letterSpacing: "0.2em",
+                textTransform: "uppercase",
+                color: "var(--text-muted)",
+              }}
+            >
+              Scroll
+            </span>
+            <span style={{ fontSize: 16, color: "var(--text-secondary)", lineHeight: 1 }}>
+              ↓
+            </span>
+          </motion.div>
+        </motion.div>
       </motion.div>
     </section>
   );
